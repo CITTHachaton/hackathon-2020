@@ -149,7 +149,7 @@
               <label for="exampleFormControlSelect1">Seleccione sus sintomas</label>
               <div class="form-group">
                 <input type="checkbox" name="sintomas[]" value="1" id="">
-                <label for="exampleFormControlSelect1">Diarréa</label>
+                <label for="exampleFormControlSelect1">Dolor o presión en el pecho</label>
               </div>
               <div class="form-group">
                 <input type="checkbox"  name="sintomas[]" value="2">
