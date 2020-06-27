@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Covid test</title>
+  <title>Hackathon2020 CITTSB</title>
 
   <!-- Bootstrap core CSS -->
   <link href="/presentacion/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -181,6 +181,25 @@
       </div>
     </div>
   </section>
+
+
+  <section class="features" id="Test">
+    <div class="container">
+      <div class="section-heading text-center">     
+        <h2>Video de prevención</h2>
+        {{-- <p class="text-muted">Rellena el siguiente formulario</p> --}}
+       
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <iframe src="https://scratch.mit.edu/projects/408099448/embed" allowtransparency="true" width="100%" 
+          height="450" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
 <!-- Modal -->
