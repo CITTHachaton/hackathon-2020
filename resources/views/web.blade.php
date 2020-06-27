@@ -181,6 +181,7 @@
       </div>
     </div>
   </section>
+  <hr style="color: #0056b2;" />
 
 
   <section class="features" id="Test">
@@ -213,7 +214,7 @@
         </button>
       </div>
       <div class="modal-body">
-        Usted es una persona con posible COVID
+        <div id="texto"></div>
         <img src="/images/mask-woman.svg" width="100px" alt="">
         <br> 
         <strong>¿Desea contactar con el consultorio mas cercano?</strong>
@@ -323,11 +324,18 @@
       function resolverTest(e){
         e.preventDefault();
         
-        const edad = document.getElementById('idEdad').value;
-        // const edad = document.getElementById('idEdad').value;
-        console.log(LocationOfMap);
-
-        // const 
+        let annio = document.getElementById('idEdad').value;
+        let temperatura = document.getElementById('idTemperatura').value;
+        let localizacion = LocationOfMap;
+        let edad = 2000 - annio;
+        
+        if(edad >= 45 && temperatura> 37){
+          console.log('Covid');
+          document.getElementById('texto').innerHTML = "Usted es una persona con posible COVID.";
+        }else{
+          console.log('no covid');
+          document.getElementById('texto').innerHTML = "No estas en los grupos de riesgo, cuidate y no salgas de tu casa.";
+        }
 
         $('#exampleModal').modal('show');
       }
