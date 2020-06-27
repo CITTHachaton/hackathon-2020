@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 
+use App\Hospital;
+
 class HomeController extends Controller
 {
 
@@ -38,6 +40,27 @@ class HomeController extends Controller
 
     public function presentacion(){
         return view('web');
+    }
+
+    public function new_hospitales(){
+        // $h1 = new Hospital();
+        // $h1->name = "Hospital Dr. Exequiel González Cortés";
+        // $h1->lat = "-33,484805";
+        // $h1->lon = "-70,648188";
+        // $h1->save();
+
+        $h1 = new Hospital();
+        $h1->name = "Hospital Dr. Exequiel González Cortés";
+        $h1->lat = "-33,484805";
+        $h1->lon = "-70,648188";
+        $h1->save();
+
+    }
+
+
+    public function hospitales(){
+        $hospitales = Hospital::get();        
+        return $hospitales;
     }
 
 }

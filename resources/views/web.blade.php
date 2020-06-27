@@ -46,6 +46,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#Test">Autoevaluación</a>
+            <a class="nav-link " href="/mapa">Mapa</a>
           </li>
         </ul>
       </div>
@@ -104,7 +105,7 @@
     <div class="container">
       <div class="section-heading text-center">     
         <h2>Autoevaluación</h2>
-        <p class="text-muted">Rellena el siguiente formulario</p>
+        {{-- <p class="text-muted">Rellena el siguiente formulario</p> --}}
        
       </div>
       <div class="row">
@@ -128,7 +129,7 @@
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">Fecha Nacimiento</label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="idEdad">
                 @for ($i = date('Y'); $i >= 1900 ; $i--)
                   <option value="{{ $i }}">{{ $i }}</option>
                 @endfor
@@ -137,58 +138,47 @@
             <div class="form-group">
               <label for="exampleFormControlInput1">Tu temperatura</label>
               {{-- <input type="number" class="form-control" id="" placeholder=""> --}}
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="idTemperatura">
                 @for ($i = 36; $i <= 39 ; $i++)
-                  <option value="{{ $i }}">{{ $i }}</option>
-                  <option value="{{ $i + 0.5 }}">{{ $i + 0.5 }}</option>
+                <option value="{{ $i }}">{{ $i }}</option>
+                <option value="{{ $i + 0.5 }}">{{ $i + 0.5 }}</option>
                 @endfor
               </select>
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">Seleccione sus sintomas</label>
               <div class="form-group">
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="sintomas[]" value="1" id="">
                 <label for="exampleFormControlSelect1">Diarréa</label>
               </div>
               <div class="form-group">
-                <input type="checkbox" name="" id="">
+                <input type="checkbox"  name="sintomas[]" value="2">
                 <label for="exampleFormControlSelect1">Tos Seca</label>
               </div>
               <div class="form-group">
-                <input type="checkbox" name="" id="">
+                <input type="checkbox"  name="sintomas[]" value="3">
                 <label for="exampleFormControlSelect1">Cansancio</label>
               </div>
               <div class="form-group">
-                <input type="checkbox" name="" id="">
+                <input type="checkbox"  name="sintomas[]" value="4">
                 <label for="exampleFormControlSelect1">Dolor de cabeza</label>
               </div>
               <div class="form-group">
-                <input type="checkbox" name="" id="">
+                <input type="checkbox"  name="sintomas[]" value="5">
                 <label for="exampleFormControlSelect1">Dificultad al respirar</label>
               </div>
-              {{-- <select multiple  class="form-control" id="exampleFormControlSelect1">
-                <option option="1">Diarrea</option>
-                <option option="2">Tos Seca</option>
-                <option option="3">Cansancio</option>
-                <option option="4">Dolor de cabeza</option>
-                <option option="5">Dificultad al respirar</option>
-              </select> --}}
             </div>
             <br>
             <div class="form-group">
-              <input type="checkbox" name="" id="">
+              <input type="checkbox" name="isValid" id="idValid">
               <label for="exampleFormControlSelect1">Acepta los <u>Terminos y condiciones</u>.</label>
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-success btn-block">Enviar</button>
-              {{-- <label for="exampleFormControlTextarea1">Example textarea</label> --}}
-              {{-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> --}}
             </div>
           </form>
-
         </div>
       </div>
-
     </div>
   </section>
 
@@ -204,11 +194,13 @@
         </button>
       </div>
       <div class="modal-body">
-        Usted es una persona con posible COVID 
-        <strong>+5692003939</strong>
+        Usted es una persona con posible COVID
+        <img src="/images/mask-woman.svg" width="100px" alt="">
+        <br> 
+        <strong>¿Desea contactar con el consultorio mas cercano?</strong>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        {{-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> --}}
         {{-- <button type="button" class="btn btn-primary" >Llamar</button> --}}
         <a href="https://wa.me/56998299855" target="_blink" class="btn btn-success">Whatsapp</a>
 
@@ -218,51 +210,51 @@
   </div>
 </div>
 
-{{-- 
+
   <section class="contact bg-primary" id="contact">
     <div class="container">
-      <h2>We
-        <i class="fas fa-heart"></i>
-        new friends!</h2>
+      <h2>Hackathon 2020 <i class="fas fa-heart"></i> CITT</h2>
       <ul class="list-inline list-social">
-        <li class="list-inline-item social-twitter">
-          <a href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
+        <li class="list-inline-item">
+          <img src="/images/citt.jpg" alt="">
         </li>
-        <li class="list-inline-item social-facebook">
-          <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
+        <li class="list-inline-item">
+          <img src="/images/duocingenieria.png" alt="">
         </li>
-        <li class="list-inline-item social-google-plus">
-          <a href="#">
-            <i class="fab fa-google-plus-g"></i>
-          </a>
+        <li class="list-inline-item">
+          <img src="/images/duocsalud.png" alt="">
+        </li>
+        <li class="list-inline-item ">
+          <img src="/images/here.png" alt="">
+        </li>
+        <li class="list-inline-item">
+          <img src="/images/13.png" alt="">
+        </li>
+        <li class="list-inline-item">
+          <img src="/images/robotics.jpg" alt="">
         </li>
       </ul>
     </div>
-  </section> --}}
+  </section>
 
-  {{-- <footer>
+  <footer>
     <div class="container">
-      <p>&copy; Your Website 2020. All Rights Reserved.</p>
+      <p>&copy; Hackathon.</p>
       <ul class="list-inline">
         <li class="list-inline-item">
-          <a href="#">Privacy</a>
+          <a href="#">CITT San Bernardo 2020</a>
         </li>
-        <li class="list-inline-item">
+        {{-- <li class="list-inline-item">
           <a href="#">Terms</a>
         </li>
         <li class="list-inline-item">
           <a href="#">FAQ</a>
-        </li>
+        </li> --}}
       </ul>
     </div>
-  </footer> --}}
+  </footer>
+
   {{-- here.com --}}
-  
-  
   <script src="/presentacion/vendor/jquery/jquery.min.js"></script>
   <script src="/presentacion/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/presentacion/vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -311,6 +303,13 @@
        
       function resolverTest(e){
         e.preventDefault();
+        
+        const edad = document.getElementById('idEdad').value;
+        // const edad = document.getElementById('idEdad').value;
+        console.log(LocationOfMap);
+
+        // const 
+
         $('#exampleModal').modal('show');
       }
   </script>
