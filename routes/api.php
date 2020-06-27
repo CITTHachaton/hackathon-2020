@@ -12,3 +12,6 @@ Route::get('contagiados', function () {
     return $persona;
 });
 
+
+Route::get('regiones', 'HomeController@regiones');
+Route::get('covid', 'HomeController@covids');
