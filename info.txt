@@ -1,0 +1,22 @@
+¡Hola! 
+Soy el sistema de ayuda temprana para la detección del covid
+SATDECO.
+
+Veremos que síntomas tienes.
+
+Para empezar, acepta la geolocalización.
+
+(acá se muestra el mapa, en el cual puedes hacer click en tu ubicación o algún otro método)
+
+--¿Tienes alguna enfermedad crónica?
+--Anota tu edad
+
+Toma tu temperatura.
+
+Anótala acá
+
+Busca en la yema de tus dedos decoloración o erupciones cutáneas.
+
+Si tienes fiebre, tos seca y cansancio, son síntomas habituales del covid.
+
+Considerando la cantidad de síntomas que has presentado te indico donde está el servicio de salud pública más cercano, ya que eres un posible caso de covid.

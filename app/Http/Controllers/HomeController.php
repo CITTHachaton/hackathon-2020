@@ -20,7 +20,8 @@ class HomeController extends Controller
         $response = $client->request('GET', $this->URL_regions);
         $statusCode = $response->getStatusCode();
         $body = $response->getBody()->getContents();
-    
+        //$body->header('Content-Type', 'application/json');
+        // $body = json_encode($body);
         return $body;
     }
 
@@ -29,10 +30,14 @@ class HomeController extends Controller
         $response = $client->request('GET', $this->URL_covid);
         $statusCode = $response->getStatusCode();
         $body = $response->getBody()->getContents();
-        // return $body;
+        return $body;
 
         
     }
 
+
+    public function presentacion(){
+        return view('web');
+    }
 
 }
